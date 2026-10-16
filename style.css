@@ -1,0 +1,101 @@
+:root {
+  --morado: #6a1fd8;
+  --morado-claro: #b57bff;
+  --texto: #1d1530;
+  --muted: #6b6480;
+  --fondo: #f6f4fb;
+  --card: #ffffff;
+  --ok: #1f9d55;
+  --warn: #b7791f;
+  --err: #c53030;
+  --wait: #2b6cb0;
+  --radius: 14px;
+  color-scheme: light;
+}
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+html, body { margin: 0; }
+body {
+  font-family: "Segoe UI", system-ui, -apple-system, Roboto, Arial, sans-serif;
+  color: var(--texto);
+  background: var(--fondo);
+  line-height: 1.5;
+}
+body.popup { width: 280px; padding: 16px; }
+h1 { font-size: 20px; margin: 0; letter-spacing: .08em; color: var(--morado); }
+h2 { font-size: 17px; margin: 0 0 8px; }
+p { margin: 8px 0; }
+a { color: var(--morado); }
+.muted { color: var(--muted); }
+.small { font-size: 13px; }
+.center { text-align: center; }
+.brand { display: flex; align-items: center; gap: 10px; }
+.top {
+  display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px;
+  padding: 14px 24px; background: var(--card); border-bottom: 1px solid #e7e2f3;
+  position: sticky; top: 0; z-index: 5;
+}
+.top-actions { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+.wrap { max-width: 980px; margin: 32px auto; padding: 0 20px; }
+.narrow { max-width: 520px; margin: 0 auto; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 20px; }
+.card {
+  background: var(--card); border-radius: var(--radius); padding: 24px;
+  box-shadow: 0 6px 24px rgba(106, 31, 216, .08);
+}
+.card + .card { margin-top: 0; }
+.btn {
+  display: inline-block; font: inherit; font-size: 15px; font-weight: 600; cursor: pointer;
+  padding: 10px 18px; border-radius: 10px; border: 2px solid var(--morado);
+  background: #fff; color: var(--morado); text-decoration: none; margin: 4px 0;
+}
+.btn:hover { background: #f1e9ff; }
+.btn:focus-visible, .drop:focus-visible { outline: 3px solid #ffd60a; outline-offset: 2px; }
+.btn.primary { background: var(--morado); color: #fff; }
+.btn.primary:hover { background: #5a18b8; }
+.btn.ghost { border-color: transparent; background: transparent; }
+.btn.block { display: block; width: 100%; text-align: center; margin: 8px 0; }
+.btn.small { padding: 6px 12px; font-size: 13px; margin: 0; }
+.row { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+.pill {
+  display: inline-block; padding: 6px 14px; border-radius: 999px; font-size: 14px; font-weight: 600;
+  color: #fff; background: var(--wait);
+}
+.pill.ok { background: var(--ok); }
+.pill.warn { background: var(--warn); }
+.pill.err { background: var(--err); }
+.pill.wait { background: var(--wait); }
+.qr {
+  display: block; margin: 16px auto; border-radius: 12px; background: #fff;
+  border: 1px solid #e7e2f3; max-width: 100%; height: auto;
+}
+.link-box {
+  word-break: break-all; background: #f6f4fb; padding: 10px; border-radius: 8px; font-size: 13px;
+}
+.code {
+  font-size: 44px; font-weight: 800; letter-spacing: .12em; color: var(--morado);
+  margin: 16px 0 24px; font-variant-numeric: tabular-nums;
+}
+.drop {
+  display: block; text-align: center; padding: 36px 16px; margin: 8px 0 16px;
+  border: 2px dashed var(--morado-claro); border-radius: var(--radius); cursor: pointer;
+  background: #faf7ff; transition: background .15s, border-color .15s;
+}
+.drop.over, .drop:hover { background: #f1e9ff; border-color: var(--morado); }
+.link { color: var(--morado); font-weight: 700; text-decoration: underline; }
+.progress { height: 10px; background: #ece7f7; border-radius: 999px; overflow: hidden; }
+.bar {
+  height: 100%; width: 0; background: linear-gradient(90deg, var(--morado), var(--morado-claro));
+  transition: width .2s ease;
+}
+.list { list-style: none; padding: 0; margin: 14px 0 0; }
+.list li {
+  display: flex; justify-content: space-between; align-items: center; gap: 12px;
+  padding: 10px 0; border-bottom: 1px solid #efeaf8;
+}
+.fname { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.muted:empty { display: none; }
+
+.hint { padding: 10px 12px; border-radius: 8px; font-size: 14px; margin: 12px 0; text-align: left;
+  background: #fff8e1; border-left: 4px solid #ffd60a; }
+.hint.err { background: #fdecec; border-left-color: var(--err); }

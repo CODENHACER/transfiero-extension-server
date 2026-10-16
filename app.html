@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TRANSFIERO</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="top">
+    <div class="brand">
+      <img src="icons/icon48.png" width="36" height="36" alt="">
+      <h1>TRANSFIERO</h1>
+    </div>
+    <div class="top-actions">
+      <span id="status" class="pill wait">Iniciando…</span>
+      <a class="btn ghost" href="help.html" target="_blank" rel="noopener">Instrucciones</a>
+    </div>
+  </header>
+
+  <main class="wrap">
+
+    <section data-panel="pair" class="card center narrow">
+      <h2>1. Escanea el código con tu móvil</h2>
+      <p class="muted">Abre la cámara de tu Android o iPhone y apunta al código QR. Se abrirá una página en el navegador del móvil.</p>
+      <canvas id="qr" class="qr"></canvas>
+      <p class="muted small">¿No puedes escanear? Copia el enlace y ábrelo en tu móvil:</p>
+      <p class="link-box"><a id="link" href="#" target="_blank" rel="noopener"></a></p>
+      <button id="copy" class="btn">Copiar enlace</button>
+      <p id="hint" class="hint" hidden></p>
+      <button id="retry" class="btn primary" hidden>Reintentar</button>
+    </section>
+
+    <section data-panel="verify" class="card center narrow" hidden>
+      <h2>2. Comprueba el código</h2>
+      <p>Debe ser <strong>idéntico</strong> al que aparece en la pantalla de tu móvil.</p>
+      <div id="code" class="code" aria-live="polite"></div>
+      <div class="row">
+        <button id="confirm" class="btn primary">Coinciden</button>
+        <button id="cancel" class="btn">No coinciden</button>
+      </div>
+    </section>
+
+    <section data-panel="transfer" hidden>
+      <div class="grid">
+        <div class="card">
+          <h2>Enviar al móvil</h2>
+          <label id="drop" class="drop" for="pick">
+            Arrastra archivos aquí o <span class="link">elígelos</span>
+          </label>
+          <input id="pick" type="file" multiple hidden>
+          <div class="progress"><div id="sendBar" class="bar"></div></div>
+          <p id="sendLabel" class="muted small">Todavía no has enviado nada.</p>
+        </div>
+        <div class="card">
+          <h2>Recibido del móvil</h2>
+          <div class="progress"><div id="recvBar" class="bar"></div></div>
+          <p id="recvLabel" class="muted small">Esperando archivos…</p>
+          <ul id="received" class="list"></ul>
+        </div>
+      </div>
+      <p class="center"><button id="newSession" class="btn ghost">Terminar sesión</button></p>
+    </section>
+
+    <section data-panel="ended" class="card center narrow" hidden>
+      <h2>Sesión terminada</h2>
+      <p id="endMsg" class="muted"></p>
+      <button id="restart" class="btn primary">Nuevo código QR</button>
+    </section>
+
+  </main>
+
+  <script src="lib/qrcode.min.js"></script>
+  <script type="module" src="app.js"></script>
+</body>
+</html>

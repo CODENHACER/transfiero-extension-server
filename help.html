@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Instrucciones de uso · TRANSFIERO</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .doc { max-width: 760px; margin: 32px auto; padding: 0 20px 48px; }
+    .doc section { background: #fff; border-radius: var(--radius); padding: 22px 26px; margin-bottom: 16px; box-shadow: 0 6px 24px rgba(106,31,216,.08); }
+    .doc ol, .doc ul { padding-left: 22px; }
+    .doc li { margin: 6px 0; }
+    .aviso { background: #fff8e1; border-left: 4px solid #ffd60a; padding: 10px 14px; border-radius: 8px; }
+    .doc .hero { display:flex; align-items:center; gap:14px; margin-bottom: 8px; }
+    kbd { background:#f1edf9; border:1px solid #d9d0ec; border-bottom-width:2px; border-radius:6px; padding:1px 6px; font-size:13px; }
+  </style>
+</head>
+<body>
+  <main class="doc">
+    <div class="hero">
+      <img src="icons/icon128.png" width="64" height="64" alt="">
+      <div>
+        <h1>TRANSFIERO</h1>
+        <p class="muted">Instrucciones de uso</p>
+      </div>
+    </div>
+    <p><a href="app.html">← Volver a TRANSFIERO</a></p>
+
+    <section>
+      <h2>¿Qué es?</h2>
+      <p>TRANSFIERO envía fotos, vídeos, documentos y cualquier otro archivo entre tu ordenador y tu móvil, Android o iPhone. No necesitas cables, ni instalar aplicaciones en el móvil: solo escanear un código QR.</p>
+      <p>Los archivos viajan directamente entre tus dispositivos y van cifrados. TRANSFIERO no los guarda en ningún servidor.</p>
+    </section>
+
+    <section>
+      <h2>Requisitos</h2>
+      <ul>
+        <li>Google Chrome (o Microsoft Edge) en Windows 11.</li>
+        <li>Un móvil con Android (Chrome) o iOS (Safari) y cámara.</li>
+        <li>PC y móvil conectados a la <strong>misma red Wi-Fi</strong>, o con datos móviles activos en el móvil.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Cómo conectar tu móvil (paso a paso)</h2>
+      <ol>
+        <li>En el PC, haz clic en el icono de TRANSFIERO y pulsa <strong>Abrir TRANSFIERO</strong>.</li>
+        <li>Aparece un código QR. Con la <strong>cámara de tu móvil</strong> (no hace falta app) escanéalo.</li>
+        <li>Se abre una página en el navegador del móvil. Espera a que aparezca el código de 6 cifras.</li>
+        <li>Compara los dos códigos: en el PC y en el móvil deben ser <strong>idénticos</strong>.</li>
+        <li>Si coinciden, pulsa <strong>Coinciden</strong> en el PC y en el móvil. Si no coinciden, pulsa <strong>No coinciden</strong> y repite el proceso.</li>
+      </ol>
+      <p class="aviso"><strong>Importante:</strong> mantén la pantalla del móvil encendida mientras transfieres. Si el móvil se bloquea, la transferencia se detiene.</p>
+    </section>
+
+    <section>
+      <h2>Enviar archivos del PC al móvil</h2>
+      <ol>
+        <li>Arrastra los archivos a la zona punteada <em>Enviar al móvil</em>, o haz clic en <em>elígelos</em>.</li>
+        <li>Los archivos llegan al móvil uno tras otro. Verás el progreso en la pantalla.</li>
+        <li>En el móvil, pulsa <strong>Guardar</strong> junto al archivo para guardarlo en Fotos, Descargas o Archivos.</li>
+      </ol>
+    </section>
+
+    <section>
+      <h2>Enviar archivos del móvil al PC</h2>
+      <ol>
+        <li>En el móvil, pulsa <strong>Elegir archivos</strong> y selecciona fotos, vídeos o documentos.</li>
+        <li>En el PC, el archivo se descarga automáticamente a la carpeta de <em>Descargas</em>.</li>
+        <li>Si Chrome bloquea la descarga, pulsa <strong>Guardar</strong> en la lista de recibidos. Si Chrome pregunta si permites <em>varias descargas</em>, responde que sí.</li>
+      </ol>
+    </section>
+
+    <section>
+      <h2>Consejos</h2>
+      <ul>
+        <li>Para fotos y vídeos de iPhone, si aparecen en formato HEIC, elige <em>Más compatible</em> en Ajustes › Cámara › Formatos, o envía la foto como documento.</li>
+        <li>Envía varios archivos a la vez seleccionándolos juntos.</li>
+        <li>Para archivos muy grandes (varios GB), conviene usar una red Wi-Fi estable.</li>
+        <li>Pulsa <kbd>Terminar sesión</kbd> cuando acabes. El código QR deja de funcionar y se crea uno nuevo la próxima vez.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Solución de problemas</h2>
+      <ul>
+        <li><strong>No conecta:</strong> comprueba que PC y móvil estén en la misma Wi-Fi. Prueba a desactivar la VPN en ambos dispositivos.</li>
+        <li><strong>El código QR caduca:</strong> pasados unos minutos sin escanear, el código deja de ser válido. Pulsa <kbd>Nuevo código QR</kbd>.</li>
+        <li><strong>Los códigos no coinciden:</strong> cancela y vuelve a escanear. Si ocurre siempre, otra persona o un programa podría estar interfiriendo en la red.</li>
+        <li><strong>La transferencia se paraliza:</strong> mantén la pantalla del móvil encendida y la app del navegador abierta en primer plano.</li>
+        <li><strong>Un archivo no se descarga en el PC:</strong> revisa la carpeta de Descargas o pulsa <kbd>Guardar</kbd> en la lista.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Privacidad</h2>
+      <p>TRANSFIERO no recopila datos personales ni usa analítica ni publicidad. Los archivos no pasan por ningún servidor de TRANSFIERO. Un servidor de emparejamiento solo transmite, de forma temporal, la información necesaria para conectar los dos dispositivos. Consulta la política completa en el enlace de la ficha de la extensión.</p>
+    </section>
+  </main>
+</body>
+</html>
