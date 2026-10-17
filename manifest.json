@@ -18,12 +18,5 @@
     }
   },
   "minimum_chrome_version": "116",
-  "permissions": [
-    "storage"
-  ],
-  "host_permissions": [
-    "https://codenhacer.github.io/*",
-    "wss://signal.rtc.sk/*",
-    "http://localhost/*"
-  ]
+  "permissions": []
 }
